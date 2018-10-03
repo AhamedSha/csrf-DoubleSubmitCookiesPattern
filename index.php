@@ -22,7 +22,6 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
    
-
 </head>
 
 <body>
@@ -43,17 +42,14 @@
     <div class="container">
         <div class="row">
 
-            <!-- csrf form block -->
             <div class="col-md-5 mx-auto align-self-center">
                 <div class="card shadow my-5 p-3">
                     <div class="card-body">
                         <h5 class="card-title text-center">User Profile</h5>
                         <hr class="my-4">
 
-                        <!-- csrf form -->
                         <form class="mt-3 mb-3" action="./src/control.php" method="POST">
 
-                            <!-- csrf hidden input field -->
                             <input type="hidden" id="csrf_token" name="csrf_token" value="admin" />
 
                             <div class="form-group">
@@ -66,7 +62,6 @@
                             </div>
                             <button type="submit" class="btn btn-success btn-block mt-5" name="verify">Submit</button>
                         </form>
-                        <!-- End csrf form -->
 
                     </div>
                     <div class="card-footer">
@@ -76,16 +71,14 @@
 					</div>
                 </div>
             </div>
-            <!-- End csrf form block -->
 
         </div>
     </div>
 
-    <!-- CSRF Token retrieve | from cookie storage -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script>
 
-        // function to extract generated CSRF token from stored cookie
+        // extract generated CSRF token from stored cookie
         function extractToken() {
 
             var cookieName = "csrf_token_cookie=";
@@ -110,7 +103,6 @@
             return token;
         }
 
-        // append function to append the CSRF token to a hidden field
         function appendToken() {
             document.getElementById("csrf_token").value = extractToken();
         }

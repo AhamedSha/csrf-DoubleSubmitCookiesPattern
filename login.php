@@ -9,7 +9,7 @@
 
         if(($username == "admin") && ($password == "password")){
 
-			// set a session variable
+			// assign session variable
 			$_SESSION['csrf_session'] = "csrfdscpsamplephp";
 
 			// regenerate an id for session and store in a cookie
@@ -51,14 +51,12 @@
 	<div class="container">
 		<div class="row">
 
-			<!-- Sign in block -->
 			<div class="col-md-4 mx-auto order-12">
 			<h2 class="text-center">Double Submit Cookies Pattern</h2>
 				<div class="card my-5 p-3 shadow">
 				   	<div class="card-body">
 						<h5 class="card-title text-center">Sign In</h5>
 
-						<!-- Sign in Form -->
 						<form class="mt-5 mb-3" action="login.php" method="POST">
 							<div class="form-group">
 								<label for="username">Username</label>
@@ -70,7 +68,6 @@
 							</div>
 							<button type="submit" class="btn btn-primary btn-block mt-5" name="login">Login</button>
 						</form>
-						<!-- End Sign in Form -->
 
 					</div>
 					<div class="card-footer">
@@ -81,7 +78,6 @@
 					</div>
 				</div>
 			</div>
-			<!-- End Sign in block -->
 		</div>
 	</div>
 
